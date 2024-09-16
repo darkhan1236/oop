@@ -1,18 +1,19 @@
-# Пример создания списка
-my_list = [1, 2, 3, 4, 5]
-print(my_list)
+import math
 
-# Добавление элемента в список
-my_list.append(6)
-print(my_list)
 
-# Удаление элемента из списка
-my_list.remove(3)
-print(my_list)
+class Task77g:
+    def __init__(self, n):
+        self.n = n
+    
+    def calc(self):
+        res = 0
+        sum = 0
+        for i in range(1, n+1):
+            sum = sum + math.sin(i)
+            res = res + 1/sum
+        return res
 
-# Доступ к элементу по индексу
-print(my_list[2])
-
-# Пример создания словаря
-my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
-print(my_dict) 
+n = int(input("n = "))
+task77g = Task77g(n)
+res = task77g.calc()
+print(res)
